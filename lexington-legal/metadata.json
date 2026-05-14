@@ -1,0 +1,8 @@
+{
+  "name": "Lexington Legal",
+  "description": "Professional legal services for high-stakes cases. Secure and authoritative legal representation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

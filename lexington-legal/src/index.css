@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Source Serif 4", serif;
+  --font-sans: "Manrope", sans-serif;
+
+  --color-primary: #000000;
+  --color-secondary: #775a19;
+  --color-surface: #f8f9fa;
+  --color-surface-container: #edeeef;
+  --color-on-surface: #191c1d;
+  --color-on-surface-variant: #44474d;
+  --color-outline: #75777e;
+  --color-outline-variant: #c5c6cd;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-surface text-on-surface antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
