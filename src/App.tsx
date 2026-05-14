@@ -207,11 +207,19 @@ export default function App() {
                   />
                 </div>
                 <div className="md:col-span-2 pt-10">
-                  <button className="w-full bg-[#128C7E] text-white flex items-center justify-center gap-6 py-7 rounded-sm font-black text-2xl hover:bg-[#075E54] transition-all shadow-2xl active:scale-95 group">
-                    <MessageCircle className="w-10 h-10 fill-current" />
-                    Enviar vía WhatsApp
-                  </button>
-                </div>
+                  <button className="w-full bg-[#128C7E] text-white flex items-center justify-center gap-6 py-7 rounded-sm font-black text-2xl hover:bg-[#075E54] transition-all shadow-2xl active:scale-95 group"
+    onClick={(e) => {
+      e.preventDefault();
+      const phoneNumber = '5491161694346'; // Número de WhatsApp
+      const message = `Hola, mi nombre es ${formData.fullName}. Me gustaría consultar sobre un caso de tipo ${formData.caseType}. Este es mi número: ${formData.phone}.`;
+      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }}
+  >
+    <MessageCircle className="w-10 h-10 fill-current" />
+    Enviar vía WhatsApp
+  </button>
+</div>
               </form>
             </motion.div>
           </div>
